@@ -1,20 +1,26 @@
-@import url( 'https://fonts.googleapis.com/css?family=Open+Sans');
-$font-stack: 'Open Sans', sans-serif;
+//$icon-font-path : "~bootstrap-styl/fonts/";
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+//@import '../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap'
+// @import '../../node_modules/test'
 
-html {  
-    height: 100%;
-    font-family: $font-stack;
-}
+// @import url( 'https://fonts.googleapis.com/css?family=Open+Sans');
+// $font-stack: 'Open Sans', sans-serif;
 
-body {  
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
+// html {  
+//     height: 100%;
+//     font-family: $font-stack;
+// }
 
-#main {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
+// body {  
+//     height: 100%;
+//     margin: 0;
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// #main {
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+// }
