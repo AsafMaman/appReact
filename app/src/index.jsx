@@ -1,24 +1,21 @@
-// Dependencies
-import React from 'react'; 
-import {render} from 'react-dom';
-import {Router,Route,browserHistory} from 'react-router'
-// import ReactDOM from 'react-dom';
+import 'babel-polyfill';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { render } from 'react-dom';
+import { Router, browserHistory } from 'react-router';
+import routes from './routes';
 
-// Components
-import Main from './components/common/main.jsx';
-import Home from './components/home/Home.jsx';
-import About from './components/about/About.jsx';
-
+//import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 // Styles
 import './index.scss';
 
+import configureStore from './store/configureStore';
+
+const store = configureStore();
+
 render(
-     <Router history={browserHistory}>
-        <Route component={Main}>
-            <Route path="/" component={Home}/>
-            <Route path="/about" component={About}/>
-        </Route>
-    </Router>,
-    document.getElementById('main')
-//<App />, document.getElementById('main')
+  <Provider store={store}>
+    <Router routes={routes} history={browserHistory} />
+  </Provider>,
+  document.getElementById('app')
 );
